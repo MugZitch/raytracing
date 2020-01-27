@@ -1,7 +1,12 @@
 #ifndef RAYH
 #define RAYH
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "vec3.cpp"
 
+//header file for the ray class
 class ray
 {
     public:

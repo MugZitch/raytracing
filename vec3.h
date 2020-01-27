@@ -1,10 +1,14 @@
 #ifndef VEC3H
 #define VEC3H
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include <iostream>
 #include <math.h>
 #include <stdlib.h>
 
+// class for the Three-dimensional vector
 class vec3 {
 public:
     vec3() {}

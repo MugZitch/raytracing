@@ -1,4 +1,7 @@
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "ray.h"
 
 ray :: ray (const vec3& a, const vec3& b) {A = a; B = b;}

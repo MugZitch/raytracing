@@ -1,6 +1,10 @@
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "vec3.h"
 
-
+//all the vec3 stuff
 vec3 :: vec3(float e0, float e1, float e2) { e[0] = e0; e[1] = e1; e[2] = e2; }
 inline float vec3::x() const { return e[0]; }
 inline float vec3::y() const { return e[1]; }

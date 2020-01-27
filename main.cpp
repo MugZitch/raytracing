@@ -1,14 +1,17 @@
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "hittable_list.cpp"
 #include "sphere.cpp"
 #include "camera.cpp"
 #include "material.cpp"
-
 #include "random.h"
-
 #include <float.h>
 #include <fstream>
 #include <iostream>
 
+//function for the color
 vec3 color(const ray& r, hittable *world, int depth) {
     hit_record rec;
     if (world->hit(r, 0.001, FLT_MAX, rec)) {
@@ -28,6 +31,7 @@ vec3 color(const ray& r, hittable *world, int depth) {
     }
 }
 
+// The scene for the picture is created
 hittable *random_scene() {
     int n = 500;
     hittable **list = new hittable*[n+1];
@@ -62,11 +66,12 @@ hittable *random_scene() {
     return new hittable_list(list,i);
 }
 
+// The ppm file / picture is created
 int main() {
     std::ofstream outfile;
     outfile.open("image.ppm");
-    int nx = 200;
-    int ny = 100;
+    int nx = 800;
+    int ny = 450;
     int ns = 100;
 
     outfile << "P3\n" << nx << " " << ny << "\n255\n";

@@ -1,8 +1,12 @@
 #ifndef SPHEREH
 #define SPHEREH
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "hittable.h"
 
+//header fill for the sphere class
 class sphere: public hittable  {
     public:
         sphere() {}

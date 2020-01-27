@@ -1,6 +1,9 @@
 #ifndef HITTABLEH
 #define HITTABLEH
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "ray.cpp"
 
 class material;

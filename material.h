@@ -1,11 +1,14 @@
 #ifndef MATERIALH
 #define MATERIALH
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "hittable.h"
 #include "random.h"
 
+//header file for the material classes
 struct hit_record;
-
 
 class material {
     public:

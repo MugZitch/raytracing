@@ -1,8 +1,11 @@
 #ifndef HITTABLELISTH
 #define HITTABLELISTH
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "hittable.h"
-
+// class to put the hittables in a list.
 class hittable_list: public hittable {
     public:
         hittable_list() {}

@@ -1,11 +1,14 @@
 #ifndef CAMERAH
 #define CAMERAH
 #define _USE_MATH_DEFINES
-
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include <math.h>
-
 #include "random.h"
 
+//class for the camera
 class camera {
     public:
         camera(vec3 lookfrom, vec3 lookat, vec3 vup, float vfov, float aspect, float aperture, float focus_dist);

@@ -1,5 +1,10 @@
+/*
+Author: Ricardo Mokveld
+Date: 27-01-2020
+*/
 #include "camera.h"
 
+// ray origins on a disk to lookfrom
 vec3 random_in_unit_disk() {
     vec3 p;
     do {
@@ -8,6 +13,7 @@ vec3 random_in_unit_disk() {
     return p;
 }
 
+//This allows us to modify the camera position.
 camera :: camera(vec3 lookfrom, vec3 lookat, vec3 vup, float vfov, float aspect, float aperture, float focus_dist) { 
     lens_radius = aperture / 2;
     float theta = vfov*M_PI/180;
