@@ -1,8 +1,9 @@
-#include "hittable_list.h"
-#include "sphere.h"
-#include "camera.h"
+#include "hittable_list.cpp"
+#include "sphere.cpp"
+#include "camera.cpp"
+#include "material.cpp"
+
 #include "random.h"
-#include "material.h"
 
 #include <float.h>
 #include <fstream>
@@ -32,8 +33,8 @@ hittable *random_scene() {
     hittable **list = new hittable*[n+1];
     list[0] = new sphere(vec3(0,-1000,0), 1000, new lambertian(vec3(0.5, 0.5, 0.5)));
     int i = 1;
-    for (int a = -11; a < 11; a++) {
-        for (int b = -11; b < 11; b++) {
+    for (int a = -6; a < 9; a++) {
+        for (int b = -11; b < 5; b++) {
             float choose_mat = random_double();
             vec3 center(a+0.9*random_double(),0.2,b+0.9*random_double());
             if ((center-vec3(4,0.2,0)).length() > 0.9) {
@@ -68,12 +69,11 @@ int main() {
     int ny = 100;
     int ns = 100;
 
-    std::cout << "P3\n" << nx << " " << ny << "\n255\n";
     outfile << "P3\n" << nx << " " << ny << "\n255\n";
 
     hittable *world = random_scene();
 
-    vec3 lookfrom(13,2,3);
+    vec3 lookfrom(10,2,-6);
     vec3 lookat(0,0,0);
     float dist_to_focus = 10;
     float aperture = 0.1;
@@ -94,7 +94,6 @@ int main() {
             int ir = int(255.99*col[0]);
             int ig = int(255.99*col[1]);
             int ib = int(255.99*col[2]);
-            std::cout << ir << " " << ig << " " << ib << "\n";
             outfile << ir << " " << ig << " " << ib << "\n";
         }
     }
